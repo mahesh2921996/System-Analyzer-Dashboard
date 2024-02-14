@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 import sqlite3
 
 def get_serverinfo():
-    cnx = create_engine('sqlite:///system_analyzer.db').connect()
+    cnx = create_engine('sqlite:///functions/system_analyzer.db').connect()
 
     df = pd.read_sql_table(table_name="ServerInfo", con=cnx)
 
@@ -13,7 +13,7 @@ def get_serverinfo():
 
 def entry_into_serverinfo_table(id, server_name, server_path):
     # Store file details in database
-    conn = sqlite3.connect("system_analyzer.db")
+    conn = sqlite3.connect("functions/system_analyzer.db")
 
     c = conn.cursor()
 
