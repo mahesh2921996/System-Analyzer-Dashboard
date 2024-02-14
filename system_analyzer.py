@@ -53,7 +53,7 @@ if selected_server_name!=None:
             path = df_db["Server_Sytem_Path"].at[i]
 
     if len(path) != 0:
-        all_files = [files for root, dirs, files in os.walk(path + "\\system_info")]
+        all_files = [files for root, dirs, files in os.walk(path + "/system_info")]
 
     # if all_files != None:
     prof_df = sys_processor_obj.create_df_from_prof_folder(all_files[0])
