@@ -46,7 +46,7 @@ class SystemProcessor:
     
     def create_df_from_prof_files(self, path, selected_files):
         
-        file_path = path + "\\system_info\\" + selected_files
+        file_path = path + "/system_info/" + selected_files
 
         # Create a Stats object, passing in the path to the .prof file as an argument.
         stats = pstats.Stats(file_path)
